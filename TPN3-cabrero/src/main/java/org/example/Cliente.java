@@ -10,10 +10,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "cliente")
-@AllArgsConstructor
-@Getter
-@Setter
-@Builder
 @Audited
 public class Cliente implements Serializable {
     @Id
@@ -52,20 +48,20 @@ public class Cliente implements Serializable {
         this.domicilio = domicilio;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellido() {
@@ -88,8 +84,15 @@ public class Cliente implements Serializable {
         return domicilio;
     }
 
-    public void setDomicilio() {
+    public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
 
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(List<Factura> facturas) {
+        this.facturas = facturas;
+    }
 }

@@ -4,11 +4,7 @@ import org.hibernate.envers.Audited;
 import java.io.Serializable;
 import javax.persistence.*;
 
-@Setter
-@Getter
 @Entity
-@AllArgsConstructor
-@Builder
 @Audited
 public class Domicilio implements Serializable {
 
@@ -39,5 +35,35 @@ public class Domicilio implements Serializable {
         this.cliente = cliente;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombreCalle() {
+        return nombreCalle;
+    }
+
+    public void setNombreCalle(String nombreCalle) {
+        this.nombreCalle = nombreCalle;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 }

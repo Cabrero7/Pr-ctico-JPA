@@ -10,12 +10,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Setter
-@Getter
 @Entity
 @Table(name = "articulo")
-@AllArgsConstructor
-@Builder
 @Audited
 public class Articulo implements Serializable {
 
@@ -68,4 +64,51 @@ public class Articulo implements Serializable {
         this.denominacion = deniminacion;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getDenominacion() {
+        return denominacion;
+    }
+
+    public void setDenominacion(String denominacion) {
+        this.denominacion = denominacion;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public List<DetalleFactura> getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(List<DetalleFactura> detalle) {
+        this.detalle = detalle;
+    }
+
+    public Set<Categoria> getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(Set<Categoria> categorias) {
+        this.categorias = categorias;
+    }
 }

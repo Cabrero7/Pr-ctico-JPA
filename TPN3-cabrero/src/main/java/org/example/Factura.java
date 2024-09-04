@@ -7,11 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Setter
-@Getter
 @Entity
-@AllArgsConstructor
-@Builder
 @Audited
 public class Factura implements Serializable{
     @Id
@@ -46,5 +42,51 @@ public class Factura implements Serializable{
         this.detalle = detalle;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<DetalleFactura> getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(List<DetalleFactura> detalle) {
+        this.detalle = detalle;
+    }
 }
